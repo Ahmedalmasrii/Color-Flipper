@@ -10,9 +10,12 @@ btn.addEventListener("click", function () {
   let hexColor = "#";
   /*Starta Loop från 0 och den ska loopa tills den når 6 gånger*/
   for (let i = 0; i < 6; i++) {
-    hexColor += hex[0];
+    hexColor += hex[getRandomNumber()];
   }
   color.textContent = hexColor;
   document.body.style.backgroundColor = hexColor;
 });
  
+function getRandomNumber () {
+    return Math.floor(Math.random() * hex.length)
+} 
